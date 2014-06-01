@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.1.1'
-gem "pg"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -21,6 +20,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+
+gem 'google-analytics-rails'
+gem "figaro"
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
@@ -29,6 +31,10 @@ gem 'spring',        group: :development
 
 # Use unicorn as the app server
 gem 'unicorn'
+
+group :development, :test do
+  gem "sqlite3"
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
