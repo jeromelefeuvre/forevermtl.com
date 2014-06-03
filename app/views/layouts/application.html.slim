@@ -3,8 +3,38 @@ html
   head
     title ForeverMtl
     = analytics_init if Rails.env.production?
+    meta[name="robots" content="NOINDEX, NOFOLLOW"]
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  body
-    = yield
+  body#page-1966587957.body.cc-page.cc-page-index.cc-indexpage.cc-pagemode-default.cc-content-parent
+    #cc-inner.cc-content-parent
+      #container.cc-content-parent
+        #oben.cc-content-parent
+          #wrapper_all.cc-content-parent
+            .gutter.cc-content-parent
+              #header
+                #emotion-header[data-action="emoHeader" style="background: transparent;width: 840px; height: 240px;"]
+                  img#emotion-header-img
+                    = image_tag("header.jpg")
+                  strong#emotion-header-title[style="left: 64%;top: 16%;font: normal 18px/120% Raleway, cursive;color: #FFFFFF;"]
+                    | Forever Living Products
+                      Montréal
+
+                      Anne-Cécile Le Pan
+                      Distributrice indépendante
+
+                    div[style="margin-top:10px"]
+                      = mail_to('info@forevermtl.com')
+                    div 514-279-7019
+
+              / = render(partial: 'shared/navigation')
+              #wrapper.cc-content-parent
+                #content.cc-content-parent
+                  .gutter.cc-content-parent
+                    #content_area[data-container="content"]
+                      #content_start
+                      = yield
+              br.c
+        #unten
+    img#hzDownscaled[style="position: absolute; top: -10000px;"]
