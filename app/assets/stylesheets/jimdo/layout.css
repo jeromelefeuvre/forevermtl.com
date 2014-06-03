@@ -1,0 +1,171 @@
+/*
+-----------------------------------------------
+Layout 381
+Author: Yannick Kollega
+Version: Oktober 07
+----------------------------------------------- */
+
+
+/*  Typo, Links, Headlines
+----------------------------------------------- 
+
+.body,
+div#sidebar, 
+div#sidebar a,
+div#content a,
+div#content a:hover,
+div#footer a:hover { color:#333; }*/ 
+
+
+div#footer,
+div#footer a,
+div#footer a:visited { color: #666666; }
+
+
+
+
+
+
+/*  CSS Layout
+----------------------------------------------- */
+
+body 
+{	
+	text-align:center; 
+	background-color:#E4E4E4;
+}
+
+
+div#container
+{
+	width:940px;
+	margin:0 auto;
+	text-align:left;
+	background-color:white;
+}
+
+
+div#oben
+{
+	width:940px;
+	background:#E4E4E4 url('http://u.jimdo.com/www26/o/layout/lac3db2d8b162e757/img/content_bg.gif') repeat-y top left;
+	text-align:center;
+}
+
+
+div#wrapper_all
+{
+	width:880px;
+	margin:0 auto;
+	background-color:white;
+	text-align:left;
+}
+
+
+div#navigation { margin-top:22px; }
+
+
+div#unten
+{
+	width:940px;
+	height:80px;
+	background:#E4E4E4 url('http://u.jimdo.com/www26/o/layout/lac3db2d8b162e757/img/unten_bg.gif') no-repeat top left;
+}
+
+
+div#wrapper_left
+{
+	width:595px;
+	float:left;
+	margin-top:22px;
+}
+
+
+div#content {	border:1px #eee solid; }
+
+
+div#sidebar
+{
+	width:225px;
+	float:right;
+	margin-top:22px;
+	border:1px #eee solid; 
+}
+
+div#jimdobox {	margin-bottom:30px; }
+
+
+/* gutter */
+div#wrapper_all .gutter { padding:15px 20px 20px 20px; }
+div#navigation  .gutter { padding:0px 10px; }
+div#content     .gutter { padding:20px; }
+div#footer      .gutter { padding:10px; }
+div#sidebar     .gutter { padding:20px; }
+
+
+
+
+/* Navigation
+----------------------------------------------- */
+
+ul.mainNav1,
+ul.mainNav2,
+ul.mainNav3
+{
+	margin:0;
+	padding:0;
+	text-align:left;
+	list-style-type:none;
+}
+
+
+ul.mainNav1 li,
+ul.mainNav2 li,
+ul.mainNav3 li
+{
+	display:inline;
+	margin:0;	
+	padding:0;
+	text-decoration:none;
+}
+
+
+ul.mainNav1,
+ul.mainNav2,
+ul.mainNav3 { overflow:hidden; } /* Firefox and all */
+
+
+* html ul.mainNav1,
+* html ul.mainNav2,
+* html ul.mainNav3 { height:1%; overflow:visible; } /* IE */
+
+
+ul.mainNav1 li a, ul.mainNav1 li a:visited,
+ul.mainNav2 li a, ul.mainNav2 li a:visited,
+ul.mainNav3 li a, ul.mainNav3 li a:visited
+{
+	display:block;
+	float:left;
+	margin-right:15px;
+	padding:3px 3px 3px 10px; 
+	background-position:0px 7px;
+	background-repeat:no-repeat;
+	text-decoration:none;
+}
+
+
+ul.mainNav1 li a, ul.mainNav1 li a:visited {	color:#333; }
+ul.mainNav2 li a, ul.mainNav2 li a:visited {	color: #666 ; }
+ul.mainNav3 li a, ul.mainNav3 li a:visited {	color: #999; }
+
+
+ul.mainNav1 li a:hover,
+ul.mainNav2 li a:hover,
+ul.mainNav3 li a:hover { text-decoration:underline; }
+
+
+ul.mainNav1 li a.current,
+ul.mainNav2 li a.current,
+ul.mainNav1 li a.parent,
+ul.mainNav2 li a.parent,
+ul.mainNav3 li a.current { font-weight:bold; }
