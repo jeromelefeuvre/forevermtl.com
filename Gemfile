@@ -1,3 +1,4 @@
+ruby '2.0.0'
 source 'https://rubygems.org'
 
 gem 'rails', '4.1.1'
@@ -32,6 +33,9 @@ gem 'spring',        group: :development
 
 # Use unicorn as the app server
 gem 'unicorn'
+
+# https://devcenter.heroku.com/articles/ruby-support#injected-plugins
+gem 'rails_12factor'
 
 group :development, :test do
   gem "sqlite3"
