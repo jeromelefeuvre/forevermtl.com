@@ -40,6 +40,12 @@ gem 'rails_12factor'
 group :development, :test do
   gem "sqlite3"
   gem 'better_errors'
+
+  gem "rspec", ">= 2.4.0"
+  gem "bundler"
+  gem "jeweler", "> 1.6.4"
+  gem 'i18n-spec'
+  gem 'localeapp'
 end
 
 # Use Capistrano for deployment
