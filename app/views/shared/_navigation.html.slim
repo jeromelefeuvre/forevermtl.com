@@ -4,7 +4,7 @@
       div
         ul#mainNav1.mainNav1
           li#cc-nav-view-1966587957
-            a.current.level_1[href="./Accueil - Site de forevermtl !_files/Accueil - Site de forevermtl !.html"]
+            = link_to root_path, class: ['level_1'] << is_current_path?(root_path) do
               span
                 | Accueil
           li#cc-nav-view-1966588057
