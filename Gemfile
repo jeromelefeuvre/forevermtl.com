@@ -38,8 +38,10 @@ gem 'unicorn'
 gem 'rails_12factor'
 
 group :development, :test do
+  gem 'thin'
   gem "sqlite3"
   gem 'better_errors'
+  gem "binding_of_caller"
 
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
