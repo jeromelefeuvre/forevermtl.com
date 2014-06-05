@@ -46,11 +46,14 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
   gem 'guard-rspec'
-  gem 'rb-fsevent' if `uname` =~ /Darwin/
   gem "bundler"
   gem "jeweler", "> 1.6.4"
   # gem 'i18n-spec'
   gem 'localeapp'
+end
+
+group :test, :darwin do
+  gem 'rb-fsevent'
 end
 
 # Use Capistrano for deployment
