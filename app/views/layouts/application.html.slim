@@ -17,15 +17,14 @@ html
                 #emotion-header[data-action="emoHeader" style="background: transparent;width: 840px; height: 240px;"]
                   img#emotion-header-img
                     = image_tag("header.jpg")
-                  strong#emotion-header-title[style="left: 64%;top: 16%;font: normal 18px/120% Raleway, cursive;color: #FFFFFF;"]
-                    | Forever Living Products
-                      Montréal
-
-                      Anne-Cécile Le Pan
+                  strong#emotion-header-title[style="left: 44%;top: 13%;font: normal 26px/120% Raleway, cursive;color: #FFFFFF;"]
+                    | Faites entrer l'aloe vera dans votre vie
+                  strong#emotion-header-title[style="left: 74%;top: 52%;font: normal 18px/120% Raleway, cursive;color: #FFFFFF;"]
+                    | Anne-Cécile Le Pan
                       Distributrice indépendante
 
                     div[style="margin-top:10px"]
-                      = mail_to('info@forevermtl.com')
+                      = mail_to('info@forevermtl.com', nil, style: 'font:normal 18px/120% Raleway, cursive')
                     div 514-279-7019
 
               = render(partial: 'shared/navigation')
