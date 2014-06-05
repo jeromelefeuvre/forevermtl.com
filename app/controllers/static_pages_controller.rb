@@ -2,6 +2,9 @@ class StaticPagesController < ApplicationController
   def index
   end
 
-  def help
+  def aloe_vera
+  end
+
+  def profile
   end
 end

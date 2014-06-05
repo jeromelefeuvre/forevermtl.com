@@ -8,7 +8,7 @@
               span
                 | Accueil
           li#cc-nav-view-1966588057
-            a.level_1[href="http://forevermtl.jimdo.com/l-aloe-vera/"]
+            = link_to static_pages_aloe_vera_path, class: ['level_1'] << is_current_path?(static_pages_aloe_vera_path) do
               span
                 | L'aloe vera
           li#cc-nav-view-1967481457
@@ -16,13 +16,9 @@
               span
                 | Les produits
           li#cc-nav-view-1967364757
-            a.level_1[href="http://forevermtl.jimdo.com/profil/"]
+            = link_to static_pages_profile_path, class: ['level_1'] << is_current_path?(static_pages_profile_path) do
               span
                 | Profil
-          li#cc-nav-view-1966588157
-            a.level_1[href="http://forevermtl.jimdo.com/contact/"]
-              span
-                | Contact
   .gutter
     div[data-container="navigation"]
       div
