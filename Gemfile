@@ -35,6 +35,7 @@ gem 'unicorn'
 
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'rails-i18n', '~> 4.0.0'
 
 # https://devcenter.heroku.com/articles/ruby-support#injected-plugins
 gem 'rails_12factor'
