@@ -34,6 +34,7 @@ gem 'spring',        group: :development
 gem 'unicorn'
 
 gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 # https://devcenter.heroku.com/articles/ruby-support#injected-plugins
 gem 'rails_12factor'

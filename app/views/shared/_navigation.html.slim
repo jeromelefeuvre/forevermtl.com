@@ -19,6 +19,17 @@
             = link_to static_pages_profile_path, class: ['level_1'] << is_current_path?(static_pages_profile_path) do
               span
                 | Profil
+          - if user_signed_in?
+            li#cc-nav-view-1967364757
+              = link_to admin_dashboard_path, class: ['level_1'] << is_current_path?(admin_dashboard_path) do
+                span
+                  | Admin
+          - else
+            li#cc-nav-view-1967364757
+              = link_to user_session_path, class: ['level_1'] << is_current_path?(user_session_path) do
+                span
+                  | login
+
   .gutter
     div[data-container="navigation"]
       div
