@@ -3,5 +3,5 @@ class Product < ActiveRecord::Base
                     :uniqueness => true
 
   validates :price, :numericality => true,
-                    :presence     => true,
+                    :presence     => true
 end
