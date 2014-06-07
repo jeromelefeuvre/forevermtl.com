@@ -1,27 +1,27 @@
-fr:
+es:
   active_admin:
     scopes:
-      admin: Admin
-      all: All
+      admin: 
+      all: 
   activerecord:
     attributes:
       active_admin/comment:
-        author_type: Author type
-        body: Body
-        created_at: Created at
-        namespace: Namespace
-        resource_type: Resource type
-        updated_at: Updated at
+        author_type: 
+        body: 
+        created_at: 
+        namespace: 
+        resource_type: 
+        updated_at: 
       user:
-        current_sign_in_at: Current Sign In At
-        email: Email
-        id: Id
-        password: Password
-        remember_me: Remember me
+        current_sign_in_at: 
+        email: 
+        id: 
+        password: 
+        remember_me: 
     models:
-      admin: Admin
-      comment: Comments
-      user: Users
+      admin: 
+      comment: 
+      user: 
   devise:
     confirmations:
       confirmed: 
@@ -114,7 +114,7 @@ fr:
         new:
           email: 
           password: 
-    required: required
+    required: 
   helpers:
     label:
       ransack/search:
@@ -130,5 +130,5 @@ fr:
         password: 
         remember_me: 
   index:
-    description: Forever Living Products est le fruit de la formidable réussite d’un homme, Rex Maughan, dirigé par la volonté de créer une entreprise qui allierait bien-être et liberté financière. En 1978, Rex Maughan lance aux Etats-Unis une gamme de produits commercialisée par des Distributeurs Indépendants dont la qualité et les résultats obtenus sur des millions de consommateurs l’ont conduit, aujourd’hui, à cet incroyable succès. Rapidement, Forever Living Products se multiplie, grandit et attire de nombreux partenaires désireux d’améliorer leur qualité de vie et leur bien-être quotidien tout en générant des revenus.
-    title: Qu'est-ce que Forever Living Products?
+    description: 
+    title: 
