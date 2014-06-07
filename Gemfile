@@ -50,6 +50,8 @@ group :development, :test do
   gem "jeweler", "> 1.6.4"
   # gem 'i18n-spec'
   gem 'localeapp'
+
+  gem 'hirb'
 end
 
 group :test, :darwin do
