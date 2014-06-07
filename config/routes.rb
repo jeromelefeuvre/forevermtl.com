@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
+  namespace :admins do
+    resources :products
+  end
+
   get 'static_pages/aloe_vera'
   get 'static_pages/profile'
 
