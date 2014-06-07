@@ -3,7 +3,7 @@ html
   head
     title ForeverMtl
     = analytics_init if Rails.env.production?
-    meta[name="robots" content="NOINDEX, NOFOLLOW"]
+    meta[name="descriptions" content="NOINDEX, NOFOLLOW"]
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
@@ -28,6 +28,7 @@ html
                     div 514-279-7019
 
               = render(partial: 'shared/navigation')
+              = render(partial: "shared/flash_messages")
               #wrapper.cc-content-parent
                 #content.cc-content-parent
                   .gutter.cc-content-parent
