@@ -21,3 +21,4 @@
 /config/application.yml
 
 .localeapp
+log/*
