@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { sessions: "admins/sessions" }
+
   get 'static_pages/aloe_vera'
   get 'static_pages/profile'
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

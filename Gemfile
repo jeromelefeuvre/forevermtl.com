@@ -33,6 +33,8 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 gem 'unicorn'
 
+gem 'devise'
+
 # https://devcenter.heroku.com/articles/ruby-support#injected-plugins
 gem 'rails_12factor'
 
