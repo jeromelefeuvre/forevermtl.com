@@ -11,10 +11,10 @@
             = link_to static_pages_aloe_vera_path, class: ['level_1'] << is_current_path?(static_pages_aloe_vera_path) do
               span
                 | L'aloe vera
-          / li#cc-nav-view-1967481457
-          /   a.level_1[href="http://forevermtl.jimdo.com/les-produits/"]
-          /     span
-          /       | Les produits
+          li#cc-nav-view-1967481457
+            = link_to products_path, class: ['level_1'] << is_current_path?(products_path) do
+              span
+                | Les produits
           li#cc-nav-view-1967364757
             = link_to static_pages_profile_path, class: ['level_1'] << is_current_path?(static_pages_profile_path) do
               span

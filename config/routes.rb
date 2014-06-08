@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :products
   end
 
+  resources :products, only: [:index]
+
   get 'static_pages/aloe_vera'
   get 'static_pages/profile'
 
