@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'google-analytics-rails'
 gem "figaro"
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+gem 'spring', group: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -36,9 +36,6 @@ gem 'unicorn'
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'rails-i18n', '~> 4.0.0'
-
-# https://devcenter.heroku.com/articles/ruby-support#injected-plugins
-gem 'rails_12factor'
 
 group :development, :test do
   gem 'thin'
@@ -60,6 +57,10 @@ end
 group :test, :darwin do
   gem 'rb-fsevent'
 end
+
+# https://devcenter.heroku.com/articles/ruby-support#injected-plugins
+gem 'rails_12factor', group: :production
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
