@@ -58,6 +58,9 @@ GEM
       sass (~> 3.2)
       thor
     builder (3.2.2)
+    bullet (4.10.0)
+      activesupport
+      uniform_notifier (~> 1.6.0)
     celluloid (0.15.2)
       timers (~> 1.1.0)
     coderay (1.1.0)
@@ -300,6 +303,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    uniform_notifier (1.6.1)
     warden (1.2.3)
       rack (>= 1.0)
     ya2yaml (0.31)
@@ -311,6 +315,7 @@ DEPENDENCIES
   activeadmin!
   better_errors
   binding_of_caller
+  bullet
   bundler
   coffee-rails (~> 4.0.0)
   devise

@@ -54,6 +54,7 @@ group :development, :test do
   gem 'localeapp'
 
   gem 'hirb'
+  gem 'bullet'
 end
 
 group :test, :darwin do
