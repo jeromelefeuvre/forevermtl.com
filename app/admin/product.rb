@@ -8,7 +8,9 @@ ActiveAdmin.register Product do
       number_to_currency product.price, locale: :'fr-CA'
     end
     bool_column :active
-    column :product_category
+    column :product_category do |product|
+      link_to product.product_category.title, admin_product_category_path(product.product_category)
+    end
     actions
   end
 
