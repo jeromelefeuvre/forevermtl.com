@@ -1,4 +1,6 @@
 ActiveAdmin.register Product do
+  active_admin_importable
+
   permit_params :title, :description, :price, :product_category_id, :image, :active
 
   index do

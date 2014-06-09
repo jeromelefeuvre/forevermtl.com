@@ -35,6 +35,8 @@ gem 'unicorn'
 
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'active_admin_importable'
+
 gem 'rails-i18n', '~> 4.0.0'
 gem 'carrierwave'
 

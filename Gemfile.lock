@@ -31,6 +31,7 @@ GEM
       activesupport (= 4.1.1)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_admin_importable (1.1.2)
     activemodel (4.1.1)
       activesupport (= 4.1.1)
       builder (~> 3.1)
@@ -318,6 +319,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_admin_importable
   activeadmin!
   better_errors
   binding_of_caller

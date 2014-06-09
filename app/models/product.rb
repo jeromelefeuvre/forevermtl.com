@@ -8,7 +8,6 @@ class Product < ActiveRecord::Base
                     :presence     => true
 
   mount_uploader :image, ProductImageUploader
-
   has_paper_trail
 
   scope :active, -> { where(active: true) }
