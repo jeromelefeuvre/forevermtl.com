@@ -36,6 +36,7 @@ gem 'unicorn'
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'rails-i18n', '~> 4.0.0'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'thin'
