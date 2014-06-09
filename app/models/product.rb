@@ -6,4 +6,8 @@ class Product < ActiveRecord::Base
 
   validates :price, :numericality => true,
                     :presence     => true
+
+  mount_uploader :image, ProductImageUploader
+
+  scope :active, -> { where(active: true) }
 end
