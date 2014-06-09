@@ -38,6 +38,8 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'carrierwave'
 
+gem 'paper_trail', '~> 3.0.2'
+
 group :development, :test do
   gem 'thin'
   gem 'better_errors'
