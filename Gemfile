@@ -41,6 +41,7 @@ gem 'active_admin_importable'
 
 gem 'rails-i18n', '~> 4.0.0'
 gem 'carrierwave'
+gem "mini_magick"
 
 gem 'paper_trail', '~> 3.0.2'
 
