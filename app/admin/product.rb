@@ -26,7 +26,7 @@ ActiveAdmin.register Product do
       row :updated_at
 
       row :image do
-        image_tag product.image.url
+        image_tag product.image.small.url
       end
     end
   end
