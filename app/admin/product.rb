@@ -1,7 +1,5 @@
 ActiveAdmin.register Product do
-  active_admin_importable
-
-  permit_params :title, :description, :price, :product_category_id, :image, :active
+  permit_params :price, :product_category_id, :image, :active, :title_en, :title_fr, :description_en, :description_fr
 
   index do
     selectable_column
@@ -11,7 +9,10 @@ ActiveAdmin.register Product do
     end
     bool_column :active
     column :product_category do |product|
-      link_to product.product_category.title, admin_product_category_path(product.product_category)
+      link_to(
+        product.product_category.title_fr,
+        admin_product_category_path(product.product_category)
+      ) if product.product_category
     end
     actions
   end
@@ -21,14 +22,60 @@ ActiveAdmin.register Product do
       row :product_category do
         link_to product.product_category.title, admin_product_category_path(product.product_category)
       end
-      row :title
+      I18n.available_locales.select{|l| [:fr, :en].include?(l)}.each do |locale|
+        row ('title_%s' % locale).to_sym
+      end
+
       bool_row :active
-      row :updated_at
+
+      I18n.available_locales.select{|l| [:fr, :en].include?(l)}.each do |locale|
+        row ('description_%s' % locale).to_sym
+      end
 
       row :image do
         image_tag product.image.small.url
       end
+
+      row :updated_at
     end
   end
 
+  form do |f|
+    f.inputs 'Details' do
+      f.input :code
+      f.object.title_translations.try(:each) do |locale, value|
+        f.input ('title_%s' % locale).to_sym, :input_html => {:value => value }
+      end
+      f.input :product_category
+      f.input :active
+      f.input :image
+      f.input :price
+      f.input :cc
+    end
+
+    f.inputs 'Content' do
+      f.input :description_fr, :as => :text, input_html: {rows: 4}
+      f.input :description_en, :as => :text, input_html: {rows: 4}
+    end
+
+    f.actions
+  end
+
+  active_admin_importable do |model, hash|
+      next unless Product.where(code: hash[:code]).count.zero?
+
+      product_category = ProductCategory.with_title_translation(hash[:'product_category__title_fr'], :fr).try(:first)
+      unless product_category
+        product_category = ProductCategory.create(
+          title_fr: hash[:'product_category__title_fr'],
+          title_en: hash[:'product_category__title_en']
+        )
+      end
+
+      hash[:product_category_id] = product_category.id
+      hash.delete(:'product_category__title_fr')
+      hash.delete(:'product_category__title_en')
+
+      model.create!(hash)
+   end
 end
