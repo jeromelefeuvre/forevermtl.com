@@ -1,8 +1,8 @@
 class ProductCategory < ActiveRecord::Base
   has_many :products
 
-  validates :title_en, :presence => true, :uniqueness => true
-  validates :title_fr, :presence => true, :uniqueness => true
+  # validates :title_en, :presence => true, :uniqueness => true
+  # validates :title_fr, :presence => true, :uniqueness => true
 
   translates :title, :description
 
