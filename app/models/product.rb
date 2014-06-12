@@ -10,5 +10,7 @@ class Product < ActiveRecord::Base
   mount_uploader :image, ProductImageUploader
   has_paper_trail
 
+  translates :title
+
   scope :active, -> { where(active: true) }
 end
