@@ -44,6 +44,8 @@ gem 'carrierwave'
 gem "mini_magick"
 
 gem 'paper_trail', '~> 3.0.2'
+gem 'localeapp'
+
 
 group :development, :test do
   gem 'thin'
@@ -56,7 +58,6 @@ group :development, :test do
   gem "bundler"
   gem "jeweler", "> 1.6.4"
   # gem 'i18n-spec'
-  gem 'localeapp'
 
   gem 'hirb'
   gem 'bullet'
