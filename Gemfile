@@ -2,7 +2,9 @@ ruby '2.1.2'
 source 'https://rubygems.org'
 
 gem 'rails', '4.1.1'
-gem 'pg'
+gem 'pg', :platform => :ruby
+gem 'activerecord-jdbcpostgresql-adapter', :platform => :jruby
+gem 'hstore_translate'
 
 gem "slim-rails"
 gem 'sass-rails', '~> 4.0.3'
