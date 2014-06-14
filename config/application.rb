@@ -20,5 +20,9 @@ module Forevermtl
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :fr
     config.i18n.available_locales = [:fr, :en, :es]
+
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+
+    # config.assets.precompile += ['ckeditor/*']
   end
 end

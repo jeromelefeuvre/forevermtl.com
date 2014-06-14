@@ -68,7 +68,7 @@ ActiveAdmin.register Product do
 
     f.inputs 'Content' do
       I18n.available_locales.each do |locale, value|
-        f.input ('description_%s' % locale).to_sym, :as => :text, input_html: {rows: 4}
+        f.input ('description_%s' % locale).to_sym, :as => :ckeditor, :input_html => { :ckeditor => { :height => 100 } }
       end
     end
 
