@@ -1,11 +1,11 @@
 ActiveAdmin.register Product do
-  permit_params :price, :product_category_id, :image, :active, :title_en, :title_fr, :description_en, :description_fr
+  permit_params :code, :price, :product_category_id, :image, :active, :title, :title_en, :title_fr, :description_en, :description_fr
 
   index do
     selectable_column
     column :title
     column :price do |product|
-      number_to_currency product.price, locale: :'fr-CA'
+      number_to_currency product.price, unit: '$ CAD'
     end
     bool_column :active
     column :product_category do |product|
@@ -20,15 +20,20 @@ ActiveAdmin.register Product do
   show do
     attributes_table do
       row :product_category do
-        link_to product.product_category.title, admin_product_category_path(product.product_category)
+        if product.product_category
+          link_to product.product_category.title, admin_product_category_path(product.product_category)
+        end
       end
-      I18n.available_locales.select{|l| [:fr, :en].include?(l)}.each do |locale|
+      I18n.available_locales.each do |locale|
         row ('title_%s' % locale).to_sym
       end
 
+      row :price do
+        number_to_currency product.price, unit: '$ CAD'
+      end
       bool_row :active
 
-      I18n.available_locales.select{|l| [:fr, :en].include?(l)}.each do |locale|
+      I18n.available_locales.each do |locale|
         row ('description_%s' % locale).to_sym
       end
 
@@ -43,8 +48,8 @@ ActiveAdmin.register Product do
   form do |f|
     f.inputs 'Details' do
       f.input :code
-      f.object.title_translations.try(:each) do |locale, value|
-        f.input ('title_%s' % locale).to_sym, :input_html => {:value => value }
+      I18n.available_locales.each do |locale, value|
+        f.input ('title_%s' % locale).to_sym
       end
       f.input :product_category
       f.input :active
@@ -54,8 +59,9 @@ ActiveAdmin.register Product do
     end
 
     f.inputs 'Content' do
-      f.input :description_fr, :as => :text, input_html: {rows: 4}
-      f.input :description_en, :as => :text, input_html: {rows: 4}
+      I18n.available_locales.each do |locale, value|
+        f.input ('description_%s' % locale).to_sym, :as => :text, input_html: {rows: 4}
+      end
     end
 
     f.actions

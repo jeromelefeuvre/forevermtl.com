@@ -9,15 +9,8 @@ ActiveAdmin.register ProductCategory do
   end
 
   form do |f|
-    f.inputs "Admin Details" do
-      f.input :title
-    end
-    f.actions
-  end
-
-  form do |f|
     f.inputs 'Details' do
-      f.object.title_translations.try(:each) do |locale, value|
+      I18n.available_locales.each do |locale, value|
         f.input ('title_%s' % locale).to_sym, :input_html => {:value => value }
       end
     end
