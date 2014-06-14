@@ -3,9 +3,9 @@ class ProductsController < ApplicationController
     @products = ProductCategory.where(name: params[:name]).try('products')
 
     if @products.nil?
-      @products = ProductCategory.first.products.active
+      @products = ProductCategory.first.try(:products)
     end
 
-    @products.active
+    @products = @products ? @products.active : []
   end
 end
