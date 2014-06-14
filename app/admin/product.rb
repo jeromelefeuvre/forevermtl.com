@@ -1,8 +1,10 @@
 ActiveAdmin.register Product do
-  permit_params :code, :price, :product_category_id, :image, :active, :title, :title_en, :title_fr, :description_en, :description_fr
+  permit_params :code, :price, :product_category_id, :image, :active, :star,
+                :title, :title_en, :title_fr, :description_en, :description_fr
 
   index do
     selectable_column
+    column(:star){ |product| display_rating(product.star?) }
     column :title
     column :price do |product|
       number_to_currency product.price, unit: '$ CAD'
@@ -24,6 +26,9 @@ ActiveAdmin.register Product do
           link_to product.product_category.title, admin_product_category_path(product.product_category)
         end
       end
+
+      row(:star) { |product| display_rating(product.star?) }
+
       I18n.available_locales.each do |locale|
         row ('title_%s' % locale).to_sym
       end
@@ -46,13 +51,16 @@ ActiveAdmin.register Product do
   end
 
   form do |f|
+    f.actions
+
     f.inputs 'Details' do
+      f.input :active
+      f.input :star
       f.input :code
       I18n.available_locales.each do |locale, value|
         f.input ('title_%s' % locale).to_sym
       end
       f.input :product_category
-      f.input :active
       f.input :image
       f.input :price
       f.input :cc
