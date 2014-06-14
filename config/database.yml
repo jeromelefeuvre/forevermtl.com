@@ -27,8 +27,7 @@ test:
   username: forevermtl
   password: secret7
 
-production:
-  <<: *default
-  database: forevermtl_production
-  username: forevermtl
-  password: secret7
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: 5

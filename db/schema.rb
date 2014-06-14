@@ -32,24 +32,6 @@ ActiveRecord::Schema.define(version: 20140612020813) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
-  create_table "order_products", force: true do |t|
-    t.integer  "order_id"
-    t.integer  "product_id"
-    t.integer  "count"
-    t.decimal  "amount",     precision: 10, scale: 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "orders", force: true do |t|
-    t.integer  "user_id"
-    t.text     "description"
-    t.decimal  "amount",      precision: 10, scale: 2
-    t.decimal  "cc_amout",    precision: 10, scale: 3
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "product_categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -68,18 +50,6 @@ ActiveRecord::Schema.define(version: 20140612020813) do
     t.string   "code"
     t.hstore   "title_translations"
     t.hstore   "description_translations"
-  end
-
-  create_table "shopping_cart_items", force: true do |t|
-    t.integer "owner_id"
-    t.string  "owner_type"
-    t.integer "quantity"
-    t.integer "item_id"
-    t.string  "item_type"
-    t.float   "price"
-  end
-
-  create_table "shopping_carts", force: true do |t|
   end
 
   create_table "users", force: true do |t|
