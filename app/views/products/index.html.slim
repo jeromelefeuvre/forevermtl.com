@@ -1,6 +1,10 @@
 ul.products
   - @products.each do |product|
     li.product
-      div.title= link_to(product.title, [product.product_category, product])
+      div.title
+        .fright= image_star
+        = link_to([product.product_category, product]) do
+          = product.title
+
       div.image= image_tag(product.image.small.url, class: :center)
       div.price= number_to_currency product.price, unit: '$ CAD'

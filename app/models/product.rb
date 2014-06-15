@@ -12,5 +12,6 @@ class Product < ActiveRecord::Base
   translates :title, :description
 
   scope :active, -> { where(active: true) }
+  scope :star  , -> { where(star: true) }
 
 end

@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController
   def index
-    @products = ProductCategory.find(params[:product_category_id]).try('products')
+    @products = ProductCategory.where(id: params[:product_category_id]).try(:first).try(:products)
 
-    @products = ProductCategory.first.try(:products) if @products.nil?
+    @products = Product.star if @products.blank?
 
     @product_categories = ProductCategory.only_with_products
     @products = @products ? @products.active : []
