@@ -13,6 +13,7 @@ class ProductCategory < ActiveRecord::Base
     joins(:products).
     select('product_categories.*, count(products.id) as products_count').
     order('product_categories.name').
+    where(products: {active: true}).
     having('COUNT(products.id) > 0').
     group('product_categories.id')
   }
