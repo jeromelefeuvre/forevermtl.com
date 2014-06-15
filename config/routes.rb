@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index]
 
+  resources :product_categories, only: [:index] do
+    resources :products, only: [:index, :show]
+  end
+
   get 'static_pages/aloe_vera'
   get 'static_pages/profile'
 

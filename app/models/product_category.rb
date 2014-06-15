@@ -8,7 +8,14 @@ class ProductCategory < ActiveRecord::Base
 
   before_create :set_name
 
-  scope :first_category, lambda { joins(:products).first }
+  scope :first_category    , -> { joins(:products).first }
+  scope :only_with_products, -> {
+    joins(:products).
+    select('product_categories.*, count(products.id) as products_count').
+    order('product_categories.name').
+    having('COUNT(products.id) > 0').
+    group('product_categories.id')
+  }
 
   def count
     products.count

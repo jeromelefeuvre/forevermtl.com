@@ -1,3 +1,6 @@
-- @products.each do |product|
-  = "%s => $%s CAD" % [product.title, product.price]
-  = image_tag(product.image.small.url)
+ul.products
+  - @products.each do |product|
+    li.product
+      div.title= link_to(product.title, [product.product_category, product])
+      div.image= image_tag(product.image.small.url, class: :center)
+      div.price= number_to_currency product.price, unit: '$ CAD'

@@ -29,6 +29,7 @@
               = link_to user_session_path, class: ['level_1'] << is_current_path?(user_session_path) do
                 span
                   | login
+    = render partial: 'shared/product_categories'
 
   .gutter
     div[data-container="navigation"]
