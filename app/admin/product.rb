@@ -39,7 +39,9 @@ ActiveAdmin.register Product do
       bool_row :active
 
       I18n.available_locales.each do |locale|
-        row ('description_%s' % locale).to_sym
+        row ('description_%s' % locale).to_sym do
+          product.send(('description_%s' % locale).to_sym).try(:html_safe)
+        end
       end
 
       row :image do
