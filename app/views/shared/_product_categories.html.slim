@@ -1,18 +1,8 @@
-#sidebar
-  - @product_categories.each do |product_category|
-    div
-      = link_to product_category_products_path(product_category) do
-        span
-          = product_category.title
-          = '(%s)' % product_category.products_count
-
-
-/ .gutter
-/   div[data-container="navigation"]
-/     .j-nav-variant-standard
-/       ul#mainNav2.mainNav2
-/         - @product_categories.each do |product_category|
-/           li#cc-nav-view-1967483757
-/             a.current.level_2[href="/les-produits/soins-personnels/"]
-/               span
-/                 = product_category.title
+- if @product_categories
+  #sidebar
+    - @product_categories.each do |product_category|
+      div
+        = link_to product_category_products_path(product_category) do
+          span
+            = product_category.title
+            = '(%s)' % product_category.products_count
