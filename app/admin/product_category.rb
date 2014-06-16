@@ -18,7 +18,6 @@ ActiveAdmin.register ProductCategory do
     f.actions
   end
 
-
   sidebar 'Products by this Category', :only => :show do
     table_for Product.joins(:product_category).where(:product_category_id => product_category.id) do |t|
       t.column("Title") { |product| link_to product.title, admin_product_path(product.id) }

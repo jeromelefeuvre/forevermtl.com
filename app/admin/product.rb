@@ -2,6 +2,23 @@ ActiveAdmin.register Product do
   permit_params :code, :price, :product_category_id, :image, :active, :star,
                 :title, :title_en, :title_fr, :description_en, :description_fr
 
+  scope :active
+  scope :star
+
+  config.filters = false
+
+  sidebar 'Product Categories' do
+    table_for ProductCategory.order("product_categories.title_translations -> 'fr'") do |t|
+      t.column("Title") { |product_category| link_to product_category.title, admin_product_category_products_path(product_category) }
+    end
+  end
+
+  controller do
+    def scoped_collection
+      super.includes :product_category
+    end
+  end
+
   index do
     selectable_column
     column(:star){ |product| display_rating(product.star?) }
