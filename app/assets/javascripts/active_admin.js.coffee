@@ -12,6 +12,6 @@ $ ->
           xhr.overrideMimeType "text/plain; charset=x-user-defined"
           return
       ).done (data) ->
-        $(image_object).attr("src", "/assets/rating/" + data + ".png")
+        $(image_object).attr("src", "/images/rating/" + data + ".png")
         return
 
