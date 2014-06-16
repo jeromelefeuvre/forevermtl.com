@@ -18,23 +18,29 @@ ActiveAdmin.register Product do
       super.includes :product_category
     end
 
+    def active
+      @product = Product.find(params[:id])
+
+      @product.update(active: !@product.active)
+      render json: @product.active
+    end
+
     def star
       @product = Product.find(params[:id])
 
       @product.update(star: !@product.star)
       render json: @product.star
     end
-
   end
 
   index do
     selectable_column
+    bool_column :active
     column(:star){ |product| display_rating(product.star?) }
     column :title
     column :price do |product|
       number_to_currency product.price, unit: '$ CAD'
     end
-    bool_column :active
     column :product_category do |product|
       link_to(
         product.product_category.title_fr,
