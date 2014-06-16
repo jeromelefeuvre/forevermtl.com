@@ -17,6 +17,14 @@ ActiveAdmin.register Product do
     def scoped_collection
       super.includes :product_category
     end
+
+    def star
+      @product = Product.find(params[:id])
+
+      @product.update(star: !@product.star)
+      render json: @product.star
+    end
+
   end
 
   index do

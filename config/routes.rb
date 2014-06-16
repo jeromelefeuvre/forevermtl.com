@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   namespace :admin do
-    resources :products
+    resources :products do
+      member do
+        get :star
+      end
+    end
     resources :product_categories do |variable|
       resources :products
     end
