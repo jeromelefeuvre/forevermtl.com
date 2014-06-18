@@ -1,6 +1,7 @@
 ActiveAdmin.register Product do
-  permit_params :code, :price, :product_category_id, :image, :active, :star,
-                :title, :title_en, :title_fr, :description_en, :description_fr
+  permit_params :code, :price, :product_category_id, :active, :star,
+                :title, :title_en, :title_fr, :description_en, :description_fr,
+                :image, :remote_image_url
 
   scope :active
   scope :star
@@ -59,7 +60,9 @@ ActiveAdmin.register Product do
       end
 
       row(:star) { |product| display_rating(product.star?) }
+      bool_row :active
 
+      row :code
       I18n.available_locales.each do |locale|
         row ('title_%s' % locale).to_sym
       end
@@ -67,7 +70,6 @@ ActiveAdmin.register Product do
       row :price do
         number_to_currency product.price, unit: '$ CAD'
       end
-      bool_row :active
 
       I18n.available_locales.each do |locale|
         row ('description_%s' % locale).to_sym do
@@ -94,9 +96,14 @@ ActiveAdmin.register Product do
         f.input ('title_%s' % locale).to_sym
       end
       f.input :product_category
-      f.input :image
+
       f.input :price
       f.input :cc
+    end
+
+    f.inputs "Image" do
+      f.input :image, :as => :file
+      f.input :remote_image_url, :hint => f.template.image_tag(f.object.image.small.url)
     end
 
     f.inputs 'Content' do
