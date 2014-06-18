@@ -47,12 +47,15 @@ ActiveAdmin.register Product do
     column :price, :sortable => :price do |product|
       number_to_currency product.price, unit: '$ CAD'
     end
-    column :product_category do |product|
-      link_to(
-        product.product_category.title_fr,
-        admin_product_category_path(product.product_category)
-      ) if product.product_category
+    unless params[:product_category_id]
+      column :product_category do |product|
+        link_to(
+          product.product_category.title_fr,
+          admin_product_category_path(product.product_category)
+        ) if product.product_category
+      end
     end
+
     actions
   end
 
