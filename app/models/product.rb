@@ -11,6 +11,7 @@ class Product < ActiveRecord::Base
 
   translates :title, :description
 
+  default_scope -> { order(:id)}
   scope :active, -> { where(active: true) }
   scope :star  , -> { where(star: true) }
 

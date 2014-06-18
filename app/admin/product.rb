@@ -42,8 +42,9 @@ ActiveAdmin.register Product do
     selectable_column
     bool_column :active
     column(:star){ |product| display_rating(product.star?) }
-    column :title
-    column :price do |product|
+    column :code
+    column :title, :sortable => false
+    column :price, :sortable => :price do |product|
       number_to_currency product.price, unit: '$ CAD'
     end
     column :product_category do |product|
