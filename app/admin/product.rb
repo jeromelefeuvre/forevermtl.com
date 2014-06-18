@@ -10,7 +10,14 @@ ActiveAdmin.register Product do
 
   sidebar 'Product Categories' do
     table_for ProductCategory.order("product_categories.title_translations -> 'fr'") do |t|
-      t.column("Title") { |product_category| link_to product_category.title, admin_product_category_products_path(product_category) }
+      t.column("Title") do |product_category|
+        link_to(
+          admin_product_category_products_path(product_category),
+          class: product_category.id == params[:product_category_id].to_i ? :current : nil
+        ) do
+          product_category.title
+        end
+      end
     end
   end
 
