@@ -16,7 +16,11 @@ ActiveAdmin.register Product do
 
   controller do
     def scoped_collection
-      super.includes :product_category
+      collection = super.includes(:product_category)
+
+      return collection if params[:product_category_id].blank?
+
+      collection.where(product_category_id: params[:product_category_id])
     end
 
     def active
