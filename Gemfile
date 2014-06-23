@@ -47,6 +47,7 @@ gem "mini_magick"
 gem 'paper_trail', '~> 3.0.2'
 gem 'localeapp'
 gem 'ckeditor'
+gem "twitter-bootstrap-rails"
 
 group :development, :test do
   gem 'thin'
