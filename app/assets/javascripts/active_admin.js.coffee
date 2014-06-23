@@ -15,3 +15,5 @@ $ ->
         $(image_object).attr("src", "/images/rating/" + data + ".png")
         return
 
+  $('.sidebar_section h3').on 'click', this, (e) ->
+    $(this).parent().find('.panel_contents').toggle()

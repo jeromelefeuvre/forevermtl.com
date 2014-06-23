@@ -16,10 +16,21 @@
 //
 //   .status_tag { background: #6090DB; }
 
+.col-active{
+  cursor: pointer;
+}
 .col-star img{
   cursor: pointer;
 }
 
 .col .current{
   text-decoration: blink;
+}
+
+.sidebar_section .panel_contents{
+  display: none;
+}
+
+.sidebar_section h3{
+  cursor: pointer;
 }

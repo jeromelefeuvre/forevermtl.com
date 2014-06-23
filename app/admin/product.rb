@@ -3,10 +3,14 @@ ActiveAdmin.register Product do
                 :title, :title_en, :title_fr, :description_en, :description_fr,
                 :image, :remote_image_url
 
+  config.sort_order = "id_asc"
+
   scope :active
   scope :star
 
-  config.filters = false
+  filter :code
+  filter :title_contains, label: 'Title', as: :string
+  filter :price
 
   sidebar 'Product Categories' do
     table_for ProductCategory.order("product_categories.title_translations -> 'fr'") do |t|

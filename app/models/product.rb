@@ -15,4 +15,8 @@ class Product < ActiveRecord::Base
   scope :active, -> { where(active: true) }
   scope :star  , -> { where(star: true) }
 
+  ransacker :title do |parent|
+    Arel::Nodes::InfixOperation.new('->', parent.table[:title_translations], 'fr')
+  end
+
 end
