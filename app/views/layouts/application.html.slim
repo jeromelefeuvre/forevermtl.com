@@ -33,9 +33,7 @@ html
               #wrapper.cc-content-parent
                 #content.cc-content-parent
                   .gutter.cc-content-parent
-                    #content_area[data-container="content"]
-                      #content_start
-                      = yield
+                    = render_breadcrumbs
+
+                    = yield
               br.c
-        #unten
-    img#hzDownscaled[style="position: absolute; top: -10000px;"]

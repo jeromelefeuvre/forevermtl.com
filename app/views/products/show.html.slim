@@ -1,4 +1,4 @@
 h1= @product.title
 .image= image_tag(@product.image.small.url, class: :center)
-.description= @product.description.html_safe
+.description= @product.description.try(:html_safe)
 .price= number_to_currency @product.price, unit: '$ CAD'
