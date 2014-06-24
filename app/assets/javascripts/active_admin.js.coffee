@@ -3,6 +3,22 @@
 #= require ckeditor/init
 
 $ ->
+  $('td.col-active').on "click", this, (e) ->
+    image_object = this
+    e.preventDefault()
+    $.ajax(
+        url: "/admin/products/"+ $(this).closest('tr').find('input').first().val() + "/active"
+        beforeSend: (xhr) ->
+          xhr.overrideMimeType "text/plain; charset=x-user-defined"
+          return
+      ).done (data) ->
+        if data is 'true'
+          text = '✔'
+        else
+          text = '✗'
+        $(image_object).text(text)
+        return
+
   $('td.col-star img').on "click", this, (e) ->
     image_object = this
     e.preventDefault()
