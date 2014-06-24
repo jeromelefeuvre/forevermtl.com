@@ -49,6 +49,20 @@ ActiveAdmin.register Product do
     end
   end
 
+  batch_action :active, priority: 1 do |ids|
+    Product.find(ids).each do |product|
+      product.update active: true
+    end
+    redirect_to collection_path, alert: "Products has been activate."
+  end
+
+  batch_action :deactive, priority: 2 do |ids|
+    Product.find(ids).each do |product|
+      product.update active: false
+    end
+    redirect_to collection_path, alert: "Products has been deactivate."
+  end
+
   index do
     selectable_column
     bool_column :active
