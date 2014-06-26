@@ -3,15 +3,46 @@ fr:
     scopes:
       admin: Admin
       all: All
+    upload_csv: Upload Csv
   activerecord:
     attributes:
       active_admin/comment:
-        author_type: Author type
-        body: Body
-        created_at: Created at
-        namespace: Namespace
+        author_type: Type d'auteur
+        body: Corps
+        created_at: Créé le
+        namespace: 
         resource_type: Resource type
         updated_at: Updated at
+      created_at: Créé le
+      product:
+        active: Actif
+        cc: Cc
+        code: Code
+        description: Description
+        description_en: Description en
+        description_es: Description es
+        description_fr: Description fr
+        id: Id
+        image: Image
+        price: Price
+        product_category: Product category
+        product_category_id: Product Category
+        star: Star
+        title: Title
+        title_en: Title en
+        title_es: Title es
+        title_fr: Title fr
+        updated_at: Updated at
+        versions: Versions
+      product_category:
+        id: Id
+        name: Nom
+        products: Produits
+        title: Titre
+        title_en: Titre
+        title_es: Title es
+        title_fr: Title fr
+      updated_at: Mis à jour le
       user:
         current_sign_in_at: Current Sign In At
         email: Email
@@ -20,21 +51,23 @@ fr:
         remember_me: Remember me
     models:
       admin: Admin
-      comment: Comments
-      user: Users
+      comment: Commentaires
+      product: Produits
+      product_category: Categories de produit
+      user: Utilisateurs
   devise:
     confirmations:
       confirmed: 
       send_instructions: 
       send_paranoid_instructions: 
     failure:
-      already_authenticated: 
-      inactive: 
-      invalid: 
+      already_authenticated: Vous êtes déjà enregistré.
+      inactive: Votre compte n'est pas encore activé.
+      invalid: Email ou mot de passe invalide.
       last_attempt: 
-      locked: 
-      not_found_in_database: 
-      timeout: 
+      locked: Votre compte est bloqué.
+      not_found_in_database: Email ou mot de passe invalide.
+      timeout: Votre session a expiré. Merci de vous reconnecter pour continuer.
       unauthenticated: 
       unconfirmed: 
       user:
@@ -68,7 +101,7 @@ fr:
       signed_in: 
       signed_out: 
       user:
-        signed_in: 
+        signed_in: Bienvenue dans ForeverMtl.com
         signed_out: 
     unlocks:
       send_instructions: 
@@ -82,8 +115,84 @@ fr:
       not_found: 
       not_locked: 
       not_saved: 
+  flash:
+    actions:
+      create:
+        alert: 
+        notice: 
+      update:
+        notice: 
   formtastic:
+    actions:
+      product:
+        create:
+          create: 
+        edit:
+          update: 
+        new:
+          create: 
+      product_category:
+        new:
+          create: 
+    create: Create %{model}
     hints:
+      active_admin/comment:
+        show:
+          body: 
+      product:
+        create:
+          active: 
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        edit:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          star: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        new:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+      product_category:
+        new:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       user:
         create:
           email: 
@@ -94,19 +203,139 @@ fr:
           password: 
           remember_me: 
     labels:
+      product:
+        create:
+          active: 
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        edit:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          star: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        new:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+      product_category:
+        new:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       ransack/search:
         index:
+          active: 
           author_type: 
           body: 
+          cc: 
+          code: 
           created_at: 
+          description: 
+          image: 
+          name: 
           namespace: 
+          price: 
+          product_category: 
+          products: 
           resource_type: 
+          star: 
+          title: 
           updated_at: 
+          versions: 
     placeholders:
+      active_admin/comment:
+        show:
+          body: 
+      product:
+        create:
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          price: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        edit:
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          price: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        new:
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          price: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+      product_category:
+        new:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       ransack/search:
         index:
           body: 
+          cc: 
+          code: 
+          description: 
+          image: 
+          name: 
           namespace: 
+          price: 
+          title: 
       user:
         create:
           email: 
@@ -115,20 +344,93 @@ fr:
           email: 
           password: 
     required: required
+    update: Update %{model}
   helpers:
     label:
+      product:
+        create:
+          active: 
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        edit:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          star: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        new:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+      product_category:
+        new:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       ransack/search:
         index:
+          active: 
           author_type: 
           body: 
+          cc: 
+          code: 
           created_at: 
+          description: 
+          image: 
+          name: 
           namespace: 
+          price: 
+          product_category: 
+          products: 
           resource_type: 
+          star: 
+          title: 
           updated_at: 
+          versions: 
       user:
         email: 
         password: 
         remember_me: 
   index:
     description: Forever Living Products est le fruit de la formidable réussite d’un homme, Rex Maughan, dirigé par la volonté de créer une entreprise qui allierait bien-être et liberté financière. En 1978, Rex Maughan lance aux Etats-Unis une gamme de produits commercialisée par des Distributeurs Indépendants dont la qualité et les résultats obtenus sur des millions de consommateurs l’ont conduit, aujourd’hui, à cet incroyable succès. Rapidement, Forever Living Products se multiplie, grandit et attire de nombreux partenaires désireux d’améliorer leur qualité de vie et leur bien-être quotidien tout en générant des revenus.
+    navigation:
+      aloe_vera: L'aloe vera
+      home: Accueil
+      products: Les produits
+      profile: Profile
+      top: 
     title: Qu'est-ce que Forever Living Products?

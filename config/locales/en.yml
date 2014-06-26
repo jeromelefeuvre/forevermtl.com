@@ -3,15 +3,46 @@ en:
     scopes:
       admin: 
       all: 
+    upload_csv: Upload Csv
   activerecord:
     attributes:
       active_admin/comment:
-        author_type: 
-        body: 
-        created_at: 
-        namespace: 
+        author_type: Author type
+        body: Body
+        created_at: Created at
+        namespace: Namespace
         resource_type: 
         updated_at: 
+      created_at: Created at
+      product:
+        active: Active
+        cc: 
+        code: 
+        description: 
+        description_en: 
+        description_es: 
+        description_fr: 
+        id: 
+        image: 
+        price: 
+        product_category: 
+        product_category_id: 
+        star: 
+        title: 
+        title_en: 
+        title_es: 
+        title_fr: 
+        updated_at: 
+        versions: 
+      product_category:
+        id: 
+        name: Created at
+        products: Products
+        title: Title
+        title_en: Title
+        title_es: 
+        title_fr: 
+      updated_at: Updated at
       user:
         current_sign_in_at: 
         email: 
@@ -20,8 +51,10 @@ en:
         remember_me: 
     models:
       admin: 
-      comment: 
-      user: 
+      comment: Comments
+      product: Products
+      product_category: Product Categories
+      user: Users
   devise:
     confirmations:
       confirmed: Your account was successfully confirmed.
@@ -84,8 +117,84 @@ en:
       not_saved:
         one: '1 error prohibited this %{resource} from being saved:'
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  flash:
+    actions:
+      create:
+        alert: 
+        notice: 
+      update:
+        notice: 
   formtastic:
+    actions:
+      product:
+        create:
+          create: 
+        edit:
+          update: 
+        new:
+          create: 
+      product_category:
+        new:
+          create: 
+    create: 
     hints:
+      active_admin/comment:
+        show:
+          body: 
+      product:
+        create:
+          active: 
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        edit:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          star: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        new:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+      product_category:
+        new:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       user:
         create:
           email: 
@@ -96,19 +205,139 @@ en:
           password: 
           remember_me: 
     labels:
+      product:
+        create:
+          active: 
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        edit:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          star: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        new:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+      product_category:
+        new:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       ransack/search:
         index:
+          active: 
           author_type: 
           body: 
+          cc: 
+          code: 
           created_at: 
+          description: 
+          image: 
+          name: 
           namespace: 
+          price: 
+          product_category: 
+          products: 
           resource_type: 
+          star: 
+          title: 
           updated_at: 
+          versions: 
     placeholders:
+      active_admin/comment:
+        show:
+          body: 
+      product:
+        create:
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          price: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        edit:
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          price: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        new:
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          price: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+      product_category:
+        new:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       ransack/search:
         index:
           body: 
+          cc: 
+          code: 
+          description: 
+          image: 
+          name: 
           namespace: 
+          price: 
+          title: 
       user:
         create:
           email: 
@@ -117,20 +346,93 @@ en:
           email: 
           password: 
     required: 
+    update: 
   helpers:
     label:
+      product:
+        create:
+          active: 
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        edit:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          star: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+        new:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
+      product_category:
+        new:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       ransack/search:
         index:
+          active: 
           author_type: 
           body: 
+          cc: 
+          code: 
           created_at: 
+          description: 
+          image: 
+          name: 
           namespace: 
+          price: 
+          product_category: 
+          products: 
           resource_type: 
+          star: 
+          title: 
           updated_at: 
+          versions: 
       user:
         email: 
         password: 
         remember_me: 
   index:
     description: 
+    navigation:
+      aloe_vera: 
+      home: 
+      products: 
+      profile: 
+      top: 
     title: 

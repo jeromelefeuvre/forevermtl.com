@@ -1,19 +1,19 @@
 #navigation
   = nav_bar do
     = menu_group do
-      = menu_item "Acceuil", root_path
-      = menu_item "L'aloe vera", static_pages_aloe_vera_path
-      = drop_down "Products" do
-        = menu_item "Top", products_path
+      = menu_item I18n.t("index.navigation.home"), root_path
+      = menu_item I18n.t("index.navigation.aloe_vera"), static_pages_aloe_vera_path
+      = drop_down I18n.t("index.navigation.products") do
+        = menu_item I18n.t("index.navigation.top"), products_path
         - @product_categories.each do |product_category|
           = menu_item product_category.title, product_category_products_path(product_category)
-      = menu_item "Profil", static_pages_profile_path
+      = menu_item I18n.t("index.navigation.profile"), static_pages_profile_path
 
     = menu_group :pull => :right do
       - if user_signed_in?
         = menu_item "Admin", admin_dashboard_path
       - else
-        = menu_item "Login", user_session_path
+        = menu_item I18n.t("index.navigation.login"), user_session_path
 
   .gutter
     div[data-container="navigation"]
