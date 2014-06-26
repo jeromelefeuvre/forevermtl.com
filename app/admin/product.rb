@@ -3,7 +3,7 @@ ActiveAdmin.register Product do
                 :title, :title_en, :title_fr, :description_en, :description_fr,
                 :image, :remote_image_url
 
-  config.sort_order = "id_asc"
+  config.sort_order = "active_desc"
 
   scope :active
   scope :star

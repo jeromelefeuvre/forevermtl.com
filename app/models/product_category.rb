@@ -8,6 +8,7 @@ class ProductCategory < ActiveRecord::Base
 
   before_create :set_name
 
+  default_scope              -> { order("title_translations->'fr'")}
   scope :first_category    , -> { joins(:products).first }
   scope :only_with_products, -> {
     joins(:products).

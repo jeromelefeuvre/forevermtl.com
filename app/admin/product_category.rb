@@ -1,6 +1,8 @@
 ActiveAdmin.register ProductCategory do
   permit_params :title, :title_en, :title_fr
 
+  config.sort_order = "title_translations->'fr'"
+
   index do
     selectable_column
     column :title
