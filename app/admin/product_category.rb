@@ -10,10 +10,21 @@ ActiveAdmin.register ProductCategory do
     actions
   end
 
+  show do
+    attributes_table do
+      row :name
+      I18n.available_locales.each do |locale|
+        row ('title_%s' % locale).to_sym
+      end
+
+      row :updated_at
+    end
+  end
+
   form do |f|
     f.inputs 'Details' do
       I18n.available_locales.each do |locale, value|
-        f.input ('title_%s' % locale).to_sym, :input_html => {:value => value }
+        f.input ('title_%s' % locale).to_sym
       end
     end
 
