@@ -1,5 +1,5 @@
 ActiveAdmin.register ProductCategory do
-  permit_params :title_en, :title_fr
+  permit_params :title, :title_en, :title_fr
 
   index do
     selectable_column

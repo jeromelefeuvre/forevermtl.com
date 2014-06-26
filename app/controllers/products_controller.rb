@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+class ProductsController < HomeController
   add_breadcrumb "Acceuil", :root_path
   add_breadcrumb "Les produits", :products_path
 

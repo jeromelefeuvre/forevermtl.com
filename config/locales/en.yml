@@ -42,6 +42,9 @@ en:
         title_en: Title
         title_es: 
         title_fr: 
+        count: 
+        created_at: 
+        updated_at: 
       updated_at: Updated at
       user:
         current_sign_in_at: 
