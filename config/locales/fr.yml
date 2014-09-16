@@ -10,7 +10,7 @@ fr:
         author_type: Type d'auteur
         body: Corps
         created_at: Créé le
-        namespace:
+        namespace: 
         resource_type: Resource type
         updated_at: Updated at
       created_at: Créé le
@@ -35,15 +35,15 @@ fr:
         updated_at: Updated at
         versions: Versions
       product_category:
+        count: Count
+        created_at: Created at
         id: Id
         name: Nom
         products: Produits
         title: Titre
-        title_en: Titre en
+        title_en: Titre
         title_es: Title es
         title_fr: Title fr
-        count: Count
-        created_at: Created at
         updated_at: Updated at
       updated_at: Mis à jour le
       user:
@@ -58,382 +58,458 @@ fr:
       product: Produits
       product_category: Categories de produit
       user: Utilisateurs
+  aloe_vera:
+    description1: |-
+      Depuis plus de 5000 ans toutes les grandes civilisations utilisent l'aloès à des fins thérapeutiques et cosmétiques.
+
+      Ses 150 principes actifs reconnus scientifiquement font de l'Aloe vera un complément alimentaire exceptionnel.
+      A travers les âges et les peuples, elle a porté divers noms :
+            - " plante de l'immortalité " par les anciens égyptiens qui l'utilisait dans le processus d'embaumement,
+            - " lys du désert " par les Arabes qui le réduisait en poudre,
+            - " le guérisseur Silencieux " par les Hindous et repris par les américains,
+            - " Remède harmonique " en Chine antique.
+
+            L'Aloe vera est une plante vivace, dont les feuilles vertes épineuses peuvent atteindre 60 cm de haut et dont les fleurs sont jaunes ou oranges. Elle est originaire d'Afrique du Nord. Une plante vivace est une plante herbacée vivant plus de 2 ans, qui résiste aux rigueurs de la mauvaise saison comme le gel en hiver ou la sècheresse en été.
+    part1:
+      description: |-
+        Les feuilles de cette plante contiennent le gel d'Aloe (utilisé en pommade topique) et un résidu jaune collant appelé le latex d'Aloe (qui peut être pris par voie orale).
+
+        Le gel est la partie la plus souvent utilisée de cette plante. Le latex contient des glycosides antraquinones (aloïnes), des éléments qui produisent des effets hautement laxatifs.
+      title: Les principaux éléments
+    part2:
+      description: |-
+        Cette plante peut être utilisée en tant que médicament topique (médicament qu'on applique sur la partie malade) pour :
+        - Guérir les brûlures et abrasions,
+        - Guérir les plaies,
+        - Soulager les coups de soleil,
+        - Atténuer les réactions de la peau suite à une radiation (par exemple après une chimiothérapie),
+        - Combattre l'herpès génital,
+        - Stimuler la production de collagène (protéine la plus abondante de l’organisme, représentant 25% de la masse protéique de l'organisme),
+        - Accélérer la cicatrisation,
+        - Stimuler le métabolisme,
+        - Lutter contre le vieillissement,
+        - Combattre le psoriasis (maladie inflammatoire de la peau qui se caractérise par l'apparition d'épaisses plaques de peau qui desquament),
+        - Soulager une inflammation des articulations notamment après une séance d'exercices intense
+
+        L'Aloe vera peut également être prise par voie orale en cas de :
+        - Ulcères,
+        - Diabètes,
+        - Asthme,
+        - Epilepsie,
+        - Ostéoarthrite,
+        - Maladie de Crohn (maladie inflammatoire chronique du système digestif),
+        - Colite ulcéreuse (maladie inflammatoire chronique du côlon et du rectum de nature auto-immune qui s’apparente à la maladie de Crohn),
+        - Besoin de soutenir le système immunitaire,
+        - Constipation.
+
+        La feuille d'Aloe vera contient de l'eau, plus de 75 éléments nutritifs et 200 autres composants végétaux (des phytonutriments). Elle contient également 20 minéraux, 12 vitamines et 18 acides aminés.
+      title: Bienfaits santé
+    part3:
+      description: |-
+        L'utilisation de la pulpe d'aloe vera fraîche ou de produits en contenant sous forme stabilisée :  il apparaît que la pulpe de la feuille d'Aloe vera :
+        - Est dénuée de toute toxicité et d'une totale innocuité
+        - N'a aucune incompatibilité avec d'autres thérapeutiques
+        - Ne présente aucune contre-indication
+        - Ne provoque aucun effet secondaire.
+      title: L'Aloès est elle utilisable par tout le monde?
+    title: Un élixir végétal aux vertus principalement régénérantes, cicatrisantes et apaisantes
+    part4:
+      description: |-
+        Le nom scientifique de l'aloès que nous utilisions pour nos produits est Aloe Vera Barbadensis ou encore Aloe Vera Barbadensis Miller.
+        Surnoms liés à sa pulpe: la fontaine de jouvence, l'élixir de longue vie, le remède harmonique, le guérisseur silencieux, le bâton du ciel, le médecin du ciel, le docteur vert, le docteur en pot, le vétérinaire en pot, la plante des brûlures, la plante qui guérit, la plante miracle, le lys du désert etc.
+  become_distributor:
+    description: "- Vous travaillez à temps choisi.\n- Vous êtes indépendant sans contrainte structurelle et financière.\n- Vos revenus sont en fonction de vos résultats.\n- La possibilité de créer votre propre affaire.\n- Des produits de qualité consommables et renouvelables.\n- Votre statut sera celui de Vendeur à Domicile Indépendant.\n- Vous bénéficiez d'un programme de formation (gratuite).\n- Et le soutien permanent d'une équipe.\n\n> Vous n'avez pas besoin :     \n- de local \n- d'avoir des stocks \n- de personnel   \n- d'obligation sur les horaires \n\nVous avez :\n- le choix de vos horaires et sans limite\n- la possibilité d'obtenir le revenu souhaité\n- la possibilité de choisir les personnes avec qui vous voulez vous développer"
+    part1:
+      description: En supprimant les intermédiaires, Forever se permet de répartir plus de 70 % à ses distributeurs.
+      title: La ventre directe
+    part2:
+      title: 5 niveaux de qualifications, 5 niveaux de rémunérations
+    title: 'Les avantages de cette opportunité:'
   devise:
     confirmations:
-      confirmed:
-      send_instructions:
-      send_paranoid_instructions:
+      confirmed: 
+      send_instructions: 
+      send_paranoid_instructions: 
     failure:
       already_authenticated: Vous êtes déjà enregistré.
       inactive: Votre compte n'est pas encore activé.
       invalid: Email ou mot de passe invalide.
-      last_attempt:
+      last_attempt: 
       locked: Votre compte est bloqué.
       not_found_in_database: Email ou mot de passe invalide.
       timeout: Votre session a expiré. Merci de vous reconnecter pour continuer.
-      unauthenticated:
-      unconfirmed:
+      unauthenticated: 
+      unconfirmed: 
       user:
-        invalid:
-        unauthenticated:
+        invalid: 
+        unauthenticated: 
     mailer:
       confirmation_instructions:
-        subject:
+        subject: 
       reset_password_instructions:
-        subject:
+        subject: 
       unlock_instructions:
-        subject:
+        subject: 
     omniauth_callbacks:
-      failure:
-      success:
+      failure: 
+      success: 
     passwords:
-      no_token:
-      send_instructions:
-      send_paranoid_instructions:
-      updated:
-      updated_not_active:
+      no_token: 
+      send_instructions: 
+      send_paranoid_instructions: 
+      updated: 
+      updated_not_active: 
     registrations:
-      destroyed:
-      signed_up:
-      signed_up_but_inactive:
-      signed_up_but_locked:
-      signed_up_but_unconfirmed:
-      update_needs_confirmation:
-      updated:
+      destroyed: 
+      signed_up: 
+      signed_up_but_inactive: 
+      signed_up_but_locked: 
+      signed_up_but_unconfirmed: 
+      update_needs_confirmation: 
+      updated: 
     sessions:
-      signed_in:
-      signed_out:
+      signed_in: 
+      signed_out: 
       user:
         signed_in: Bienvenue dans ForeverMtl.com
-        signed_out:
+        signed_out: 
     unlocks:
-      send_instructions:
-      send_paranoid_instructions:
-      unlocked:
+      send_instructions: 
+      send_paranoid_instructions: 
+      unlocked: 
   errors:
     messages:
-      already_confirmed:
-      confirmation_period_expired:
-      expired:
-      not_found:
-      not_locked:
-      not_saved:
+      already_confirmed: 
+      confirmation_period_expired: 
+      expired: 
+      not_found: 
+      not_locked: 
+      not_saved: 
   flash:
     actions:
       create:
-        alert:
-        notice:
+        alert: 
+        notice: 
       update:
-        notice:
+        notice: 
   formtastic:
     actions:
       product:
         create:
-          create:
+          create: 
         edit:
-          update:
+          update: 
         new:
-          create:
+          create: 
       product_category:
         new:
-          create:
+          create: 
     create: Create %{model}
     hints:
       active_admin/comment:
         show:
-          body:
+          body: 
       product:
         create:
-          active:
-          cc:
-          code:
-          description_en:
-          description_es:
-          description_fr:
-          image:
-          price:
-          product_category:
-          title_en:
-          title_es:
-          title_fr:
+          active: 
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title_en: 
+          title_es: 
+          title_fr: 
         edit:
-          active:
-          cc:
-          code:
-          description:
-          description_en:
-          description_es:
-          description_fr:
-          image:
-          price:
-          product_category:
-          star:
-          title:
-          title_en:
-          title_es:
-          title_fr:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          star: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
         new:
-          active:
-          cc:
-          code:
-          description:
-          description_en:
-          description_es:
-          description_fr:
-          image:
-          price:
-          product_category:
-          title:
-          title_en:
-          title_es:
-          title_fr:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
       product_category:
         new:
-          name:
-          title:
-          title_en:
-          title_en-CA:
-          title_es:
-          title_fr:
-          title_fr-CA:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       user:
         create:
-          email:
-          password:
-          remember_me:
+          email: 
+          password: 
+          remember_me: 
         new:
-          email:
-          password:
-          remember_me:
+          email: 
+          password: 
+          remember_me: 
     labels:
       product:
         create:
-          active:
-          cc:
-          code:
-          description_en:
-          description_es:
-          description_fr:
-          image:
-          price:
-          product_category:
-          title_en:
-          title_es:
-          title_fr:
+          active: 
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title_en: 
+          title_es: 
+          title_fr: 
         edit:
-          active:
-          cc:
-          code:
-          description:
-          description_en:
-          description_es:
-          description_fr:
-          image:
-          price:
-          product_category:
-          star:
-          title:
-          title_en:
-          title_es:
-          title_fr:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          star: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
         new:
-          active:
-          cc:
-          code:
-          description:
-          description_en:
-          description_es:
-          description_fr:
-          image:
-          price:
-          product_category:
-          title:
-          title_en:
-          title_es:
-          title_fr:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
       product_category:
         new:
-          name:
-          title:
-          title_en:
-          title_en-CA:
-          title_es:
-          title_fr:
-          title_fr-CA:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       ransack/search:
         index:
-          active:
-          author_type:
-          body:
-          cc:
-          code:
-          created_at:
-          description:
-          image:
-          name:
-          namespace:
-          price:
-          product_category:
-          products:
-          resource_type:
-          star:
-          title:
-          updated_at:
-          versions:
+          active: 
+          author_type: 
+          body: 
+          cc: 
+          code: 
+          created_at: 
+          description: 
+          image: 
+          name: 
+          namespace: 
+          price: 
+          product_category: 
+          products: 
+          resource_type: 
+          star: 
+          title: 
+          updated_at: 
+          versions: 
     placeholders:
       active_admin/comment:
         show:
-          body:
+          body: 
       product:
         create:
-          cc:
-          code:
-          description_en:
-          description_es:
-          description_fr:
-          price:
-          title_en:
-          title_es:
-          title_fr:
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          price: 
+          title_en: 
+          title_es: 
+          title_fr: 
         edit:
-          cc:
-          code:
-          description:
-          description_en:
-          description_es:
-          description_fr:
-          price:
-          title:
-          title_en:
-          title_es:
-          title_fr:
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          price: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
         new:
-          cc:
-          code:
-          description:
-          description_en:
-          description_es:
-          description_fr:
-          price:
-          title:
-          title_en:
-          title_es:
-          title_fr:
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          price: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
       product_category:
         new:
-          name:
-          title:
-          title_en:
-          title_en-CA:
-          title_es:
-          title_fr:
-          title_fr-CA:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       ransack/search:
         index:
-          body:
-          cc:
-          code:
-          description:
-          image:
-          name:
-          namespace:
-          price:
-          title:
+          body: 
+          cc: 
+          code: 
+          description: 
+          image: 
+          name: 
+          namespace: 
+          price: 
+          title: 
       user:
         create:
-          email:
-          password:
+          email: 
+          password: 
         new:
-          email:
-          password:
+          email: 
+          password: 
     required: required
     update: Update %{model}
   helpers:
     label:
       product:
         create:
-          active:
-          cc:
-          code:
-          description_en:
-          description_es:
-          description_fr:
-          image:
-          price:
-          product_category:
-          title_en:
-          title_es:
-          title_fr:
+          active: 
+          cc: 
+          code: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title_en: 
+          title_es: 
+          title_fr: 
         edit:
-          active:
-          cc:
-          code:
-          description:
-          description_en:
-          description_es:
-          description_fr:
-          image:
-          price:
-          product_category:
-          star:
-          title:
-          title_en:
-          title_es:
-          title_fr:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          star: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
         new:
-          active:
-          cc:
-          code:
-          description:
-          description_en:
-          description_es:
-          description_fr:
-          image:
-          price:
-          product_category:
-          title:
-          title_en:
-          title_es:
-          title_fr:
+          active: 
+          cc: 
+          code: 
+          description: 
+          description_en: 
+          description_es: 
+          description_fr: 
+          image: 
+          price: 
+          product_category: 
+          title: 
+          title_en: 
+          title_es: 
+          title_fr: 
       product_category:
         new:
-          name:
-          title:
-          title_en:
-          title_en-CA:
-          title_es:
-          title_fr:
-          title_fr-CA:
+          name: 
+          title: 
+          title_en: 
+          title_en-CA: 
+          title_es: 
+          title_fr: 
+          title_fr-CA: 
       ransack/search:
         index:
-          active:
-          author_type:
-          body:
-          cc:
-          code:
-          created_at:
-          description:
-          image:
-          name:
-          namespace:
-          price:
-          product_category:
-          products:
-          resource_type:
-          star:
-          title:
-          updated_at:
-          versions:
+          active: 
+          author_type: 
+          body: 
+          cc: 
+          code: 
+          created_at: 
+          description: 
+          image: 
+          name: 
+          namespace: 
+          price: 
+          product_category: 
+          products: 
+          resource_type: 
+          star: 
+          title: 
+          updated_at: 
+          versions: 
       user:
-        email:
-        password:
-        remember_me:
+        email: 
+        password: 
+        remember_me: 
   index:
-    description: Forever Living Products est le fruit de la formidable réussite d’un homme, Rex Maughan, dirigé par la volonté de créer une entreprise qui allierait bien-être et liberté financière. En 1978, Rex Maughan lance aux Etats-Unis une gamme de produits commercialisée par des Distributeurs Indépendants dont la qualité et les résultats obtenus sur des millions de consommateurs l’ont conduit, aujourd’hui, à cet incroyable succès. Rapidement, Forever Living Products se multiplie, grandit et attire de nombreux partenaires désireux d’améliorer leur qualité de vie et leur bien-être quotidien tout en générant des revenus.
+    description: "Forever Living Products est le fruit de la formidable réussite d’un homme, Rex Maughan, dirigé par la volonté de créer une entreprise qui allierait bien-être et liberté financière. En 1978, Rex Maughan lance aux Etats-Unis une gamme de produits commercialisée par des Distributeurs Indépendants dont la qualité et les résultats obtenus sur des millions de consommateurs l’ont conduit, aujourd’hui, à cet incroyable succès. Rapidement, Forever Living Products se multiplie, grandit et attire de nombreux partenaires désireux d’améliorer leur qualité de vie et leur bien-être quotidien tout en générant des revenus.\n\nForever Living Products est le plus grand producteur, transformateur et distributeur d’Aloès au monde. Nous contrôlons la culture des plantes, mais aussi la fabrication et la vente de nos produits, ce qui nous permet d’en garantir la meilleure qualité. \nLes produits élaborés par Forever sont les seuls sur le marché à être dotés d'une aussi forte concentration en Aloe Vera. Parmi les 300 espèces d'aloès existantes, Forever utilise la plus efficace: l'Aloe Vera Barbandensis Miller. Forever Living Product a su s'imposer sur le marché grâce à une production de qualité.\n\nPour Forever Living Products, une production de qualité se définit ainsi :\n    * Forever est propriétaire des champs où pousse l'aloès. L'intégration complète du circuit de production nous permet d'être certains de la qualité de nos produits\n    * Forever travaille selon les principes de l'agriculture raisonnée, sans pesticide ni engrais chimiques\n    * Récoltées manuellement, nettoyées et effilées, les feuilles d'Aloe Vera sont soignées pour préserver au mieux leurs vertus nutritionnelles\n    * Nos produits sont détenteurs du label Conseil Scientifique International de l'Aloès (IASC), certifiant qu'ils contiennent \"100% de gel d'Aloe Vera stabilisé\", et de la plus haute qualité\n    * Beaucoup de nos compléments alimentaires bénéficient des labels Kasher et Hallal\n    * La qualité de nos produits est contrôlée avant la mise sur le marché par une équipe de microbiologistes.\n\nLes distributeurs de Forever Living Products et les consommateurs exigent des produits d'une qualité irréprochable. Nous mettons tout en œuvre pour qu'ils soient pleinement satisfaits. \nNos produits Forever à base d'aloe vera ne sont pas testés sur les animaux. \n\nTous nos produits bénéficient d'une garantie Satisfait ou Remboursé durant 30 jours."
     navigation:
       aloe_vera: L'aloe vera
+      become_distributor: Devenir distributeur
       home: Accueil
+      links: Liens
+      login: Se connecter
       products: Les produits
       profile: Profil
       top: Top
     title: Qu'est-ce que Forever Living Products?
+  profile:
+    description: "J'utilise les produits Forever depuis 7 ans et suis à présent une fidèle cliente à tel point que j'adopte de nouveaux produits régulièrement; \n\nje suis donc bien placée pour vous parler de l'excellente qualité des produits Forever. \n\nIl me fera un plaisir de répondre à vos questions et de vous conseiller. \n\nSi vous souhaitez vous lancer dans l'aventure Forever, je suis prête à vous parrainer et vous guider dans vos premiers pas. \n\nQue vous utilisiez les produits Forever au quotidien ou que vous lanciez dans l'aventure Forever, vous ne serez pas déçu! "
+  links:
+    link1:
+      href: http://www.aloemagazine.com/marketing-produits-aloe-vera/
+      title: Coup de gueule sur le marketing des produits aloe vera !

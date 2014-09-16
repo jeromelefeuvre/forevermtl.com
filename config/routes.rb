@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/aloe_vera'
   get 'static_pages/profile'
+  get 'static_pages/become_distributor'
+  get 'static_pages/links'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

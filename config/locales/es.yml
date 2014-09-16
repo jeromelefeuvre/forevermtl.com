@@ -35,6 +35,8 @@ es:
         updated_at: 
         versions: 
       product_category:
+        count: 
+        created_at: 
         id: 
         name: 
         products: 
@@ -42,8 +44,6 @@ es:
         title_en: 
         title_es: 
         title_fr: 
-        count: 
-        created_at: 
         updated_at: 
       updated_at: 
       user:
@@ -58,6 +58,28 @@ es:
       product: 
       product_category: 
       user: 
+  aloe_vera:
+    description1: 
+    part1:
+      description: 
+      title: 
+    part2:
+      description: 
+      title: 
+    part3:
+      description: 
+      title: 
+    title: 
+    part4:
+      description: 
+  become_distributor:
+    description: 
+    part1:
+      description: 
+      title: 
+    part2:
+      title: 
+    title: 
   devise:
     confirmations:
       confirmed: 
@@ -432,8 +454,17 @@ es:
     description: 
     navigation:
       aloe_vera: 
+      become_distributor: 
       home: 
+      links: 
+      login: 
       products: 
       profile: 
       top: 
     title: 
+  profile:
+    description: 
+  links:
+    link1:
+      href: 
+      title: 

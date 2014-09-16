@@ -8,6 +8,8 @@
         - @product_categories.each do |product_category|
           = menu_item product_category.title, product_category_products_path(product_category)
       = menu_item I18n.t("index.navigation.profile"), static_pages_profile_path
+      = menu_item I18n.t("index.navigation.become_distributor"), static_pages_become_distributor_path
+      = menu_item I18n.t("index.navigation.links"), static_pages_links_path
 
     = menu_group :pull => :right do
       - if user_signed_in?
