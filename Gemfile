@@ -49,6 +49,8 @@ gem 'localeapp'
 gem 'ckeditor'
 gem "twitter-bootstrap-rails"
 
+gem 'newrelic_rpm'
+
 group :development, :test do
   gem 'thin'
   gem 'better_errors'
