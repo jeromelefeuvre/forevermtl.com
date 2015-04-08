@@ -22,12 +22,12 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'sdoc', '~> 0.4.0', :group => :doc
 
 gem 'google-analytics-rails'
 gem "figaro"
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring', group: :development
+gem 'spring', :group => :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -36,7 +36,7 @@ gem 'spring', group: :development
 gem 'unicorn'
 
 gem 'devise'
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', :github => 'gregbell/active_admin'
 gem 'active_admin_importable'
 
 gem 'rails-i18n', '~> 4.0.0'
@@ -48,8 +48,6 @@ gem 'paper_trail', '~> 3.0.2'
 gem 'localeapp'
 gem 'ckeditor'
 gem "twitter-bootstrap-rails"
-
-gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'thin'
@@ -71,9 +69,11 @@ group :test, :darwin do
   gem 'rb-fsevent'
 end
 
-# https://devcenter.heroku.com/articles/ruby-support#injected-plugins
-gem 'rails_12factor', group: :production
-
+group :production do
+  # https://devcenter.heroku.com/articles/ruby-support#injected-plugins
+  gem 'rails_12factor'
+  gem 'newrelic_rpm'
+end
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
